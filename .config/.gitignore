@@ -1,0 +1,13 @@
+*
+
+!.gitignore
+!starship.toml
+
+!alacritty
+!helix
+!zellij
+
+## vscode
+!Code/User/settings.json
+!Code/User/keybindings.json
+!Code/User/snippets

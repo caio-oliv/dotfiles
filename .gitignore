@@ -1,0 +1,16 @@
+*
+
+!.gitignore
+!.gitconfig
+
+## tracked files
+!.bashrc
+!.profile
+!.zshenv
+!.zshrc
+!.tmux.conf
+
+## tracked dirs
+!/.config
+!/.ssh
+!/.cargo

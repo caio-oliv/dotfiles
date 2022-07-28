@@ -1,0 +1,28 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+scan_timeout = 10
+command_timeout = 10000
+
+format = """
+$username\
+$directory\
+$time\
+$git_branch\
+$git_status\
+$git_state\
+$cmd_duration
+$character\
+"""
+
+[character]
+success_symbol = "[\\$](bold green)"
+error_symbol = "[\\$](bold red)"
+
+[time]
+time_format = "%H:%M"
+disabled = false
+
+[directory]
+format = "in [$path]($style)[$read_only]($read_only_style) "
