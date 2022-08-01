@@ -1,10 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-# Path to your oh-my-zsh installation.
-export ZSH="/home/caio/.oh-my-zsh"
-
-# Set name of the theme to load https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME=""
+export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(
 	git
@@ -15,7 +11,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 ########## My Configs ##########
-. $HOME/.asdf/asdf.sh
+[[ -f "$HOME/.asdf/asdf.sh" ]] && . $HOME/.asdf/asdf.sh
 
 # SSH Agent Service
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
@@ -36,27 +32,19 @@ export PATH=/usr/bin:$PATH
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
 # My init script
-$HOME/.caio_init.sh
+[[ -f "$HOME/.caio_init.sh" ]] && . $HOME/.caio_init.sh
 
-# updates PATH for the Google Cloud SDK.
-if [ -f '/usr/bin/gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/bin/gcloud/google-cloud-sdk/path.zsh.inc'; fi
-# shell command completion for gcloud.
-if [ -f '/usr/bin/gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/bin/gcloud/google-cloud-sdk/completion.zsh.inc'; fi
+# Google Cloud SDK.
+[[ -f '/usr/bin/gcloud/google-cloud-sdk/path.zsh.inc' ]] && . '/usr/bin/gcloud/google-cloud-sdk/path.zsh.inc'
+[[ -f '/usr/bin/gcloud/google-cloud-sdk/completion.zsh.inc' ]] && . '/usr/bin/gcloud/google-cloud-sdk/completion.zsh.inc'
 
 # starship setup
 eval "$(starship init zsh)"
 
 # pnpm
-export PNPM_HOME="/home/caio/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
-# zellij auto attach on woking session
-export ZELLIJ_AUTO_ATTACH="true"
-if [[ -z "$ZELLIJ" ]]; then
-    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-        zellij a -c working
-    else
-        zellij
-    fi
-fi
-
+# zellij attach on last session
+# export ZELLIJ_LAST_SESSION=$(zellij list-sessions | tail -1)
+# [[ -n "${ZELLIJ_LAST_SESSION}" ]] && zellij attach $ZELLIJ_LAST_SESSION
