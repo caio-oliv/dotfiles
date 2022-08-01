@@ -2,12 +2,12 @@
 
 !.gitignore
 !starship.toml
-
 !alacritty
 !helix
 !zellij
 
 !transmission
+!systemd
 
 ## vscode
 !Code
