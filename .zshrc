@@ -8,7 +8,7 @@ plugins=(
 	docker-compose
 )
 
-source $ZSH/oh-my-zsh.sh
+[[ -f "$ZSH/oh-my-zsh.sh" ]] && source $ZSH/oh-my-zsh.sh
 
 ########## My Configs ##########
 [[ -f "$HOME/.asdf/asdf.sh" ]] && . $HOME/.asdf/asdf.sh
