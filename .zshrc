@@ -25,6 +25,7 @@ alias ip='ip -c -h'
 alias exa='exa -l -a -b'
 alias ls='exa -l -a -b'
 alias pmr='pnpm run'
+alias pmx='pnpm exec'
 alias zll='zellij'
 
 # Docker rootless
@@ -33,6 +34,9 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
 # My init script
 [[ -f "$HOME/.caio_init.sh" ]] && . $HOME/.caio_init.sh
+
+# autojump
+[[ -f '/usr/share/autojump/autojump.sh' ]] && . '/usr/share/autojump/autojump.sh'
 
 # Google Cloud SDK.
 [[ -f '/usr/bin/gcloud/google-cloud-sdk/path.zsh.inc' ]] && . '/usr/bin/gcloud/google-cloud-sdk/path.zsh.inc'
