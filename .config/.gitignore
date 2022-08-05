@@ -2,11 +2,12 @@
 
 !.gitignore
 !starship.toml
+!chromium-flags.conf
+
 !alacritty
 !helix
 !zellij
 !sway
-
 !transmission
 !systemd
 
