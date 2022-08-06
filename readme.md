@@ -21,6 +21,7 @@ And after the checkout use the `conf` alias to manage the git home repository
 ```sh
 sudo pacman -S \
   efibootmgr \
+  man \
   man-db \
   zsh \
   git \
@@ -32,7 +33,8 @@ sudo pacman -S \
   tmux \
   exa \
   ripgrep \
-  neovim
+  neovim \
+  ttf-fira-code
 
 chsh -s $(which zsh)
 curl -sS https://starship.rs/install.sh | sh
@@ -48,6 +50,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 - [helix](https://docs.helix-editor.com/install.html)
 - [firefox](https://wiki.archlinux.org/title/firefox#Installing) ^1
 - [transmission-cli](https://archlinux.org/packages/extra/x86_64/transmission-cli/)
+- [sirula](https://github.com/DorianRudolph/sirula)
 
 > 1. add `MOZ_ENABLE_WAYLAND=1` enviroment variable to `/etc/environment` for wayland support
 

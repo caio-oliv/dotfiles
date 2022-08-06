@@ -1,5 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(
@@ -11,6 +9,11 @@ plugins=(
 [[ -f "$ZSH/oh-my-zsh.sh" ]] && source $ZSH/oh-my-zsh.sh
 
 ########## My Configs ##########
+# Start sway after shell login
+if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+  exec sway
+fi
+
 [[ -f "$HOME/.asdf/asdf.sh" ]] && . $HOME/.asdf/asdf.sh
 
 # SSH Agent Service
