@@ -10,8 +10,3 @@
 !.zshenv
 !.zshrc
 !.tmux.conf
-
-# dirs
-!/.config
-!/.ssh
-!/.cargo
