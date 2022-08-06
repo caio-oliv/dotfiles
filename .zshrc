@@ -20,6 +20,7 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export GPG_TTY=$(tty)
 
 # Aliases
+alias conf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep='grep --color'
 alias ip='ip -c -h'
 alias exa='exa -l -a -b'
