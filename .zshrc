@@ -1,5 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
+# zsh plugins
 plugins=(
 	git
 	docker
@@ -8,7 +9,6 @@ plugins=(
 
 [[ -f "$ZSH/oh-my-zsh.sh" ]] && source $ZSH/oh-my-zsh.sh
 
-########## My Configs ##########
 # Start sway after shell login
 if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
   exec sway
@@ -18,7 +18,6 @@ fi
 
 # SSH Agent Service
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-
 # GPG key
 export GPG_TTY=$(tty)
 
