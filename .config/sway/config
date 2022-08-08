@@ -13,6 +13,9 @@ set $right l
 set $term alacritty   # terminal
 set $menu yofi apps   # app launcher
 
+# Font
+font pango: FiraCode Nerd Font
+
 ## Output configuration
 # man 5 sway-output
 output HDMI-A-1 mode 2560x1080@75Hz position 2560 0
@@ -45,7 +48,7 @@ input "type:keyboard" {
 bindsym $mod+Return exec $term  # Start a terminal
 bindsym $mod+w kill             # Kill focused window
 bindsym $mod+p exec $menu       # Start your launcher
-bindsym $mod+Shift+t reload     # Reload the configuration file
+bindsym $mod+Shift+f reload     # Reload the configuration file
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -177,15 +180,8 @@ bindsym XF86Search $menu
 # Status Bar:
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-  position top
-
-  status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
-  colors {
-    statusline #ffffff
-    background #323232
-    inactive_workspace #32323200 #32323200 #5c5c5c
-  }
+  font pango:monospace, FontAwesome 12
+  swaybar_command waybar
 }
 
 include /etc/sway/config.d/*

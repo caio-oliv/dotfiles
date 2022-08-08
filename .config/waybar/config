@@ -1,0 +1,87 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 28,
+	"modules-left": [
+		"sway/workspaces",
+		"sway/mode"
+	],
+	"modules-center": [
+		"sway/window"
+	],
+	"modules-right": [
+		"pulseaudio",
+		"network",
+		"cpu",
+		"temperature",
+		"memory",
+		"battery",
+		"tray",
+		"clock"
+	],
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": false,
+		"format": "{name}"
+	},
+	"sway/mode": {
+		"format": "<span style=\"italic\">{}</span>"
+	},
+	"temperature": {
+		"critical-threshold": 80,
+		"format-critical": "{temperatureC}°C ",
+		"format": "{temperatureC}°C "
+	},
+	"tray": {
+		"icon-size": 24,
+		"spacing": 10
+	},
+	"clock": {
+		"format-alt": "{:%Y-%m-%d}"
+	},
+	"cpu": {
+		"format": "CPU {usage}%"
+	},
+	"memory": {
+		"format": "Men {}%"
+	},
+	"battery": {
+		"bat": "BAT0",
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}{capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"network": {
+		"format-wifi": "{essid} ({signalStrength}%) ",
+		"format-ethernet": "{bandwidthDownBytes} ",
+		"format-disconnected": "Disconnected ⚠"
+	},
+	"pulseaudio": {
+		"format": "{icon}{volume}%",
+		"format-bluetooth": "{icon}{volume}%",
+		"format-muted": "",
+		"format-icons": {
+			"headphones": "",
+			"handsfree": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"on-click": "pavucontrol"
+	}
+}
