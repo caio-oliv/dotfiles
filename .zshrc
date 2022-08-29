@@ -14,11 +14,18 @@ if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
   exec sway
 fi
 
+# cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# rust cross
+export CROSS_CONTAINER_ENGINE=podman
+
+# asdf
+[[ -f "/opt/asdf-vm/asdf.sh" ]] && . /opt/asdf-vm/asdf.sh
 [[ -f "$HOME/.asdf/asdf.sh" ]] && . $HOME/.asdf/asdf.sh
 
-# SSH Agent Service
+# SSH and GPG
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-# GPG key
 export GPG_TTY=$(tty)
 
 # Aliases
@@ -29,14 +36,10 @@ alias exa='exa -l -a -b'
 alias ls='exa -l -a -b'
 alias pmr='pnpm run'
 alias pmx='pnpm exec'
+alias crg='cargo'
+alias crgt='cargo nextest'
+alias crgtcov='cargo llvm-cov --html'
 alias zll='zellij'
-
-# Docker rootless
-export PATH=/usr/bin:$PATH
-export DOCKER_HOST=unix:///run/user/1000/docker.sock
-
-# My init script
-[[ -f "$HOME/.caio_init.sh" ]] && . $HOME/.caio_init.sh
 
 # autojump
 [[ -f '/usr/share/autojump/autojump.sh' ]] && . '/usr/share/autojump/autojump.sh'
