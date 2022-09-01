@@ -1,0 +1,9 @@
+[alias]
+tt = "nextest"
+
+[build]
+target-dir = ".local/build/rust"
+
+[cargo-new]
+vcs = "git"
+
