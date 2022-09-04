@@ -28,6 +28,9 @@ export CROSS_CONTAINER_ENGINE=podman
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export GPG_TTY=$(tty)
 
+# ps
+export PS_FORMAT=pid,uname,pcpu,pmem,command,start,tty
+
 # Aliases
 alias conf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep='grep --color'
