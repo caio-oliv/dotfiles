@@ -1,0 +1,11 @@
+theme = "onedark"
+
+[editor]
+line-number = "relative"
+auto-pairs = true
+color-modes = true
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+

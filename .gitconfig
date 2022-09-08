@@ -5,7 +5,7 @@
 [credential]
 	helper = cache
 [core]
-	editor = nvim
+	editor = helix
 	ignorecase = true
 	excludesFile = ~/.global.gitignore
 [alias]

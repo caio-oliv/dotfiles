@@ -14,10 +14,9 @@ if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
   exec sway
 fi
 
-# cargo
+# rust
+export RUST_BACKTRACE=1
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# rust cross
 export CROSS_CONTAINER_ENGINE=podman
 
 # asdf
@@ -28,8 +27,9 @@ export CROSS_CONTAINER_ENGINE=podman
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export GPG_TTY=$(tty)
 
-# ps
+# general
 export PS_FORMAT=pid,uname,pcpu,pmem,command,start,tty
+export EDITOR=helix
 
 # Aliases
 alias conf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -39,10 +39,8 @@ alias exa='exa -l -a -b'
 alias ls='exa -l -a -b'
 alias pmr='pnpm run'
 alias pmx='pnpm exec'
-alias crg='cargo'
-alias crgt='cargo nextest'
-alias crgtcov='cargo llvm-cov --html'
 alias zll='zellij'
+alias hx='helix'
 
 # autojump
 [[ -f '/usr/share/autojump/autojump.sh' ]] && . '/usr/share/autojump/autojump.sh'
