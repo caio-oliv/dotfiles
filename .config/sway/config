@@ -48,7 +48,6 @@ input "type:keyboard" {
 bindsym $mod+Return exec $term  # Start a terminal
 bindsym $mod+w kill             # Kill focused window
 bindsym $mod+p exec $menu       # Start your launcher
-bindsym $mod+Shift+f reload     # Reload the configuration file
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
