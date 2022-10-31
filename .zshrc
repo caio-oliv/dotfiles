@@ -3,8 +3,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # zsh plugins
 plugins=(
 	git
-	docker
-	docker-compose
 )
 
 [[ -f "$ZSH/oh-my-zsh.sh" ]] && source $ZSH/oh-my-zsh.sh
@@ -16,8 +14,12 @@ fi
 
 # rust
 export RUST_BACKTRACE=1
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$PATH:$HOME/.cargo/bin"
 export CROSS_CONTAINER_ENGINE=podman
+
+rust_cov() {
+	python -m http.server -d /home/caio/.local/build/rust/llvm-cov/html
+}
 
 # asdf
 [[ -f "/opt/asdf-vm/asdf.sh" ]] && . /opt/asdf-vm/asdf.sh
@@ -33,12 +35,15 @@ export EDITOR=helix
 
 # Aliases
 alias conf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 alias grep='grep --color'
 alias ip='ip -c -h'
 alias exa='exa -l -a -b'
 alias ls='exa -l -a -b'
 alias pmr='pnpm run'
 alias pmx='pnpm exec'
+alias podose='podman-compose'
+
 alias zll='zellij'
 alias hx='helix'
 
@@ -54,7 +59,10 @@ eval "$(starship init zsh)"
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+export PATH="$PATH:$GLOBAL_PNPM_PATH:$PNPM_HOME"
+
+# python
+export PATH="$PATH:$HOME/.local/bin"
 
 # zellij attach on last session
 # export ZELLIJ_LAST_SESSION=$(zellij list-sessions | tail -1)

@@ -10,8 +10,9 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty   # terminal
-set $menu yofi apps   # app launcher
+set $term alacritty
+set $menu yofi apps                               # app launcher
+set $screenshot grim -g "$(slurp)" - | wl-copy    # screenshot_tool
 
 # Font
 font pango: FiraCode Nerd Font
@@ -48,6 +49,7 @@ input "type:keyboard" {
 bindsym $mod+Return exec $term  # Start a terminal
 bindsym $mod+w kill             # Kill focused window
 bindsym $mod+p exec $menu       # Start your launcher
+bindsym $mod+i exec $screenshot
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.

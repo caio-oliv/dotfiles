@@ -1,6 +1,9 @@
 [alias]
-cov = "llvm-cov --html"
 tt = "nextest"
+tuni = "test --lib"
+tuni-cov = "llvm-cov --html --lib"
+te2e = "test --tests"
+te2e-cov = "llvm-cov --html --tests"
 
 [build]
 target-dir = ".local/build/rust"
