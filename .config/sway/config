@@ -15,7 +15,7 @@ set $menu yofi apps                               # app launcher
 set $screenshot grim -g "$(slurp)" - | wl-copy    # screenshot_tool
 
 # Font
-font pango: FiraCode Nerd Font
+font pango: FiraCode Nerd Font 12
 
 ## Output configuration
 # man 5 sway-output

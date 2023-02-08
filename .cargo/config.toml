@@ -5,9 +5,6 @@ tuni-cov = "llvm-cov --html --lib"
 te2e = "test --tests"
 te2e-cov = "llvm-cov --html --tests"
 
-[build]
-target-dir = ".local/build/rust"
-
 [cargo-new]
 vcs = "git"
 
