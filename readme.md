@@ -3,13 +3,13 @@
 Clone the dotfiles into a bare repository
 
 ```sh
-git clone --bare <git-repo-url> $HOME/.cfg
+git clone --bare <git-repo-url> $HOME/.dotfiles
 ```
 
 Checkout the content of the repository to your `$HOME`
 
 ```sh
-git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 ```
 
 > if there is already the same config files in the home directory, backup and remove then
