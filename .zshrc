@@ -54,6 +54,9 @@ alias hx='helix'
 [[ -f '/usr/bin/gcloud/google-cloud-sdk/path.zsh.inc' ]] && . '/usr/bin/gcloud/google-cloud-sdk/path.zsh.inc'
 [[ -f '/usr/bin/gcloud/google-cloud-sdk/completion.zsh.inc' ]] && . '/usr/bin/gcloud/google-cloud-sdk/completion.zsh.inc'
 
+# AWS CLI completition
+complete -C aws_completer aws
+
 # starship setup
 eval "$(starship init zsh)"
 
