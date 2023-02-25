@@ -2,9 +2,11 @@
 autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit -i
 
-source '.config/zsh/history_opt.zsh';
-source '.config/zsh/bindings.zsh';
-source '.config/zsh/alias.zsh';
+export XDG_CONFIG_HOME="$HOME/.config";
+
+source "$XDG_CONFIG_HOME/zsh/history_opt.zsh";
+source "$XDG_CONFIG_HOME/zsh/bindings.zsh";
+source "$XDG_CONFIG_HOME/zsh/alias.zsh";
 
 # start sway after shell login
 if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
@@ -51,4 +53,4 @@ export PATH="$PATH:$HOME/.local/bin"
 # starship setup
 eval "$(starship init zsh)"
 
-source '.config/zsh/plugins.zsh';
+source "$XDG_CONFIG_HOME/zsh/plugins.zsh";
