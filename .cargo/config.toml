@@ -8,3 +8,6 @@ te2e-cov = "llvm-cov --html --tests"
 [cargo-new]
 vcs = "git"
 
+[registries.crates-io]
+protocol = "sparse"
+

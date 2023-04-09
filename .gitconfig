@@ -16,6 +16,7 @@
 	ck = checkout
 	st = status
 	lg = log --oneline --graph
+	lsf-untracked = ls-files --others --exclude-standard
 [pull]
 	ff = only
 [commit]

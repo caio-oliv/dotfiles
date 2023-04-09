@@ -2,6 +2,14 @@
 autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit -i
 
+zstyle ':completion:*' menu select  # enable menu-drive completion
+
+# select word style from bash
+# e.g. use word delimiter as "*?_-.[]~=/&;!#$%^(){}<>"
+# use `echo $WORDCHARS` to verify
+autoload -U select-word-style
+select-word-style bash
+
 export XDG_CONFIG_HOME="$HOME/.config";
 
 source "$XDG_CONFIG_HOME/zsh/history_opt.zsh";
