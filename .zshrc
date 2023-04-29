@@ -15,6 +15,7 @@ export XDG_CONFIG_HOME="$HOME/.config";
 source "$XDG_CONFIG_HOME/zsh/history_opt.zsh";
 source "$XDG_CONFIG_HOME/zsh/bindings.zsh";
 source "$XDG_CONFIG_HOME/zsh/alias.zsh";
+fpath+="$XDG_CONFIG_HOME/zsh/functions";
 
 # start sway after shell login
 if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
@@ -62,3 +63,4 @@ export PATH="$PATH:$HOME/.local/bin"
 eval "$(starship init zsh)"
 
 source "$XDG_CONFIG_HOME/zsh/plugins.zsh";
+

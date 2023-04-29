@@ -5,8 +5,13 @@ zsh_history_substring_search_path='/usr/share/zsh/plugins/zsh-history-substring-
 
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE='1' # only unique search results are presented
 
-bindkey $zsh_key_up   history-substring-search-up;    # TODO: use up-line-or-search
-bindkey $zsh_key_down history-substring-search-down;
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+bindkey $zsh_key_up   up-line-or-beginning-search;
+bindkey $zsh_key_down down-line-or-beginning-search;
+
 
 
 #package:zsh-syntax-highlighting
