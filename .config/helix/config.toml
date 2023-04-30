@@ -1,12 +1,150 @@
-theme = "onedark"
+theme = "monokai"
 
 [editor]
-line-number = "relative"
+line-number = "absolute"
 auto-pairs = true
 color-modes = true
 true-color = true
 bufferline = "multiple"
 
+rulers = [80, 100]
+text-width = 80
+
 [editor.cursor-shape]
 insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.whitespace.render]
+space = "none"
+tab = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+tab = "→"
+newline = "⏎"
+
+
+[keys.normal]
+ins = "insert_mode"
+# b = "window_mode"
+
+## Movement
+up = "move_line_up"
+down = "move_line_down"
+left = "move_char_left"
+right = "move_char_right"
+pageup = "half_page_up"
+pagedown = "half_page_down"
+home = "goto_line_start"
+end = "goto_line_end_newline"
+
+S-up = "scroll_up"
+S-down = "scroll_down"
+
+C-left = "move_prev_word_start"
+C-right = "move_next_word_start"
+
+## Commands
+C-s = ":write"
+s = ":update"
+w = ":buffer-close"
+c = ":primary-clipboard-yank"
+v = ":primary-clipboard-paste-before"
+x = [":primary-clipboard-yank", "delete_selection"]
+
+## Operations
+tab = "indent"
+S-tab = "unindent"
+u = "undo"
+r = "redo"
+
+## Open palette/picker
+C-p = "file_picker"
+C-S-p = "command_palette"
+C-tab = "rotate_view"
+
+## Selection
+l = "extend_line_below"
+a = "select_all"
+f = "select_regex"
+del = "delete_selection"
+
+A-up = "expand_selection"
+A-down = "shrink_selection"
+A-left = "select_prev_sibling"
+A-right = "select_next_sibling"
+
+# C-S-up = "copy_selection_on_prev_line"
+# C-S-down = "copy_selection_on_prev_line"
+
+## Change
+ret = "insert_newline"
+C-h = "toggle_comments"
+
+# Window mode
+[keys.normal.b]
+q = "wclose"
+
+## Create split
+C-right = "vsplit"
+C-down = "hsplit"
+
+## Swap split
+S-right = "swap_view_right"
+S-left = "swap_view_left"
+S-up = "swap_view_up"
+S-down = "swap_view_down"
+
+## Move split
+tab = "rotate_view"
+right = "jump_view_right"
+left = "jump_view_left"
+up = "jump_view_up"
+down = "jump_view_down"
+
+[keys.insert]
+ins = "normal_mode"
+
+## Movement
+up = "move_line_up"
+down = "move_line_down"
+left = "move_char_left"
+right = "move_char_right"
+pageup = "half_page_up"
+pagedown = "half_page_down"
+home = "goto_line_start"
+end = "goto_line_end_newline"
+
+S-up = "scroll_up"
+S-down = "scroll_down"
+
+C-left = "move_prev_word_start"
+C-right = "move_next_word_start"
+
+## Change
+backspace = "delete_char_backward"
+del = "delete_char_forward"
+C-backspace = "delete_word_backward"
+C-del = "delete_word_forward"
+
+## LSP
+C-space = "completion"
+
+## Reset
+A-backspace = "no_op"
+
+## TODO
+
+### Modes
+# - space
+# - goto
+
+# - config [space mode](https://docs.helix-editor.com/keymap.html#space-mode)
+#   - code actions (rename symbol, symbol picker, hover, etc)
+
+# - config [insert mode](https://docs.helix-editor.com/keymap.html#insert-mode)
+#   - delete word (Ctrl del, Ctrl backspace)
+#   - advance/retreat word (Ctrl left/right)
 
