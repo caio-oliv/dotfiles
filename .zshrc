@@ -27,6 +27,9 @@ export RUST_BACKTRACE=1
 export PATH="$PATH:$HOME/.cargo/bin"
 export CROSS_CONTAINER_ENGINE=podman
 
+# helix
+export HELIX_PATH="$XDG_CONFIG_HOME/helix"
+
 # asdf
 if [ -f "$HOME/.asdf/asdf.sh" ]; then
 	ASDF_DIR="$HOME/.asdf";
