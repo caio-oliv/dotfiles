@@ -1,19 +1,30 @@
-theme = "monokai"
+theme = "monokai_pro"
 
 [editor]
 line-number = "absolute"
-auto-pairs = true
+bufferline = "always"
+shell = ["zsh", "-c"]
+mouse = true
+auto-info = true
+
 color-modes = true
 true-color = true
-bufferline = "multiple"
+auto-pairs = true
 
-rulers = [80, 100]
+auto-completion = false
+completion-trigger-len = 3
+completion-replace = true
+
+rulers = [80]
 text-width = 80
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
+
+[editor.file-picker]
+hidden = false
 
 [editor.whitespace.render]
 space = "none"
@@ -25,9 +36,25 @@ space = "·"
 tab = "→"
 newline = "⏎"
 
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "file-modification-indicator", "version-control"]
+center = []
+right = ["workspace-diagnostics", "selections", "position", "file-encoding", "file-type"]
+separator = ""
+mode.normal = "NOR"
+mode.insert = "INS"
+mode.select = "SEL"
 
+[editor.lsp]
+enable = true
+display-messages = true
+auto-signature-help = true
+
+
+# Normal mode
 [keys.normal]
 ins = "insert_mode"
+esc = ["keep_primary_selection", "normal_mode"]
 # b = "window_mode"
 
 ## Movement
@@ -50,41 +77,112 @@ C-right = "move_next_word_start"
 C-s = ":write"
 s = ":update"
 w = ":buffer-close"
-c = ":primary-clipboard-yank"
-v = ":primary-clipboard-paste-before"
-x = [":primary-clipboard-yank", "delete_selection"]
+c = ":clipboard-yank"
+v = ":clipboard-paste-before"
+x = [":clipboard-yank", "delete_selection"]
 
 ## Operations
 tab = "indent"
 S-tab = "unindent"
 u = "undo"
-r = "redo"
+y = "redo"
 
-## Open palette/picker
+## Open picker
 C-p = "file_picker"
-C-S-p = "command_palette"
-C-tab = "rotate_view"
+
+## Change
+del = "delete_selection"
+d = "delete_selection"
+ret = "insert_newline"
+C-k = "toggle_comments"
+"~" = "switch_case"
 
 ## Selection
+e = "select_mode"
 l = "extend_line_below"
 a = "select_all"
 f = "select_regex"
-del = "delete_selection"
 
 A-up = "expand_selection"
 A-down = "shrink_selection"
 A-left = "select_prev_sibling"
 A-right = "select_next_sibling"
 
-# C-S-up = "copy_selection_on_prev_line"
-# C-S-down = "copy_selection_on_prev_line"
+C-S-up = ["extend_to_line_bounds", ":clipboard-yank", ":clipboard-paste-before"]
+C-S-down = ["extend_to_line_bounds", ":clipboard-yank", ":clipboard-paste-after"]
 
-## Change
-ret = "insert_newline"
-C-h = "toggle_comments"
+S-A-up = ["extend_to_line_bounds", ":clipboard-yank", "delete_selection", "move_line_up", ":clipboard-paste-before"]
+S-A-down = ["extend_to_line_bounds", ":clipboard-yank", "delete_selection", ":clipboard-paste-after"]
 
-# Window mode
+## Jump
+C-tab = "goto_next_buffer"
+C-S-tab = "goto_previous_buffer"
+
+
+# Space mode
+[keys.normal.space]
+ins = "normal_mode"
+esc = "normal_mode"
+
+## Picker
+p = "file_picker"
+"?" = "command_palette"
+b = "buffer_picker"
+j = "jumplist_picker"
+# FIXME: symbol picker does not work in typescript
+s = "symbol_picker"
+S-s = "workspace_symbol_picker"
+d = "diagnostics_picker"
+S-d  = "workspace_diagnostics_picker"
+
+## LSP
+r = "rename_symbol"
+a = "code_action"
+h = "hover"
+x = "select_references_to_symbol_under_cursor"
+
+## Reset
+w = "no_op"
+P = "no_op"
+y = "no_op"
+Y = "no_op"
+R = "no_op"
+
+# Goto mode
+[keys.normal.g]
+ins = "normal_mode"
+esc = "normal_mode"
+
+## File
+home = "goto_file_start"
+end = "goto_file_end"
+tab = "goto_next_buffer"
+S-tab = "goto_previous_buffer"
+
+## Code
+d = "goto_definition"
+t = "goto_type_definition"
+r = "goto_reference"
+i = "goto_implementation"
+
+## Reset
+e = "no_op"
+f = "no_op"
+h = "no_op"
+l = "no_op"
+s = "no_op"
+c = "no_op"
+b = "no_op"
+y = "no_op"
+a = "no_op"
+m = "no_op"
+
+
+# Window/buffer mode
 [keys.normal.b]
+ins = "normal_mode"
+esc = "normal_mode"
+
 q = "wclose"
 
 ## Create split
@@ -104,7 +202,16 @@ left = "jump_view_left"
 up = "jump_view_up"
 down = "jump_view_down"
 
+
+# Extend mode
+[keys.select]
+esc = ["keep_primary_selection", "normal_mode"]
+ins = "normal_mode"
+
+
+# Insert mode
 [keys.insert]
+esc = "normal_mode"
 ins = "normal_mode"
 
 ## Movement
@@ -126,6 +233,8 @@ C-right = "move_next_word_start"
 ## Change
 backspace = "delete_char_backward"
 del = "delete_char_forward"
+# FIXME: to use some key bindings such as "Ctrl-Backspace" the terminal
+# must support the "Enhanced Keyboard Protocol"
 C-backspace = "delete_word_backward"
 C-del = "delete_word_forward"
 
@@ -134,17 +243,4 @@ C-space = "completion"
 
 ## Reset
 A-backspace = "no_op"
-
-## TODO
-
-### Modes
-# - space
-# - goto
-
-# - config [space mode](https://docs.helix-editor.com/keymap.html#space-mode)
-#   - code actions (rename symbol, symbol picker, hover, etc)
-
-# - config [insert mode](https://docs.helix-editor.com/keymap.html#insert-mode)
-#   - delete word (Ctrl del, Ctrl backspace)
-#   - advance/retreat word (Ctrl left/right)
 
