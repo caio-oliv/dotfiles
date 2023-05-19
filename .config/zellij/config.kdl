@@ -39,7 +39,7 @@ default_layout "compact"
 // Choose the mode that zellij uses when starting up.
 // Default: normal
 //
-// default_mode "locked"
+default_mode "normal"
 
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could
@@ -56,7 +56,7 @@ mouse_mode true
 // Valid values: positive integers
 // Default value: 10000
 //
-scroll_buffer_size 10000
+scroll_buffer_size 5000
 
 // Provide a command to execute when copying text. The text will be piped to
 // the stdin of the program to perform the copy. This can be used with
@@ -75,7 +75,7 @@ scroll_buffer_size 10000
 //   - system (default)
 //   - primary
 //
-// copy_clipboard "primary"
+copy_clipboard "system"
 
 // Enable or disable automatic copy (and clear) of selection when releasing mouse
 // Default: true
@@ -104,6 +104,16 @@ copy_on_select true
 
 keybinds {
     unbind "Ctrl h"
+    unbind "Ctrl g"
+    unbind "Ctrl Delete"
+
+    normal {
+        bind "F12" { SwitchToMode "locked"; }
+    }
+
+    locked clear-defaults=true {
+        bind "F12" { SwitchToMode "normal"; }
+    }
 }
 
 themes {

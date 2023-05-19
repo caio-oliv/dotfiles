@@ -2,7 +2,8 @@
 autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit -i
 
-zstyle ':completion:*' menu select  # enable menu-drive completion
+# enable menu-drive completion
+zstyle ':completion:*' menu select
 
 # select word style from bash
 # e.g. use word delimiter as "*?_-.[]~=/&;!#$%^(){}<>"
@@ -10,7 +11,20 @@ zstyle ':completion:*' menu select  # enable menu-drive completion
 autoload -U select-word-style
 select-word-style bash
 
+# XDG env
+export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config";
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache";
+
+export XDG_DESKTOP_DIR="$HOME/desktop";
+export XDG_DOWNLOAD_DIR="$HOME/downloads";
+export XDG_DOCUMENTS_DIR="$HOME/documents";
+export XDG_MUSIC_DIR="$HOME/music";
+export XDG_VIDEOS_DIR="$HOME/videos";
+export XDG_PICTURES_DIR="$HOME/images";
+export XDG_PUBLICSHARE_DIR="$HOME/public";
+
 
 source "$XDG_CONFIG_HOME/zsh/history_opt.zsh";
 source "$XDG_CONFIG_HOME/zsh/bindings.zsh";
@@ -18,8 +32,9 @@ source "$XDG_CONFIG_HOME/zsh/alias.zsh";
 fpath+="$XDG_CONFIG_HOME/zsh/functions";
 
 # start sway after shell login
-if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-  exec sway
+if [ -z $WAYLAND_DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+	export XDG_CURRENT_DESKTOP=sway;
+  exec sway;
 fi
 
 # rust
