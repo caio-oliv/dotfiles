@@ -58,6 +58,7 @@ export GPG_TTY=$(tty)
 # general
 export PS_FORMAT=pid,uname,pcpu,pmem,command,start,tty
 export EDITOR=helix
+export LESSHISTFILE=-
 
 # autojump
 [[ -f '/usr/share/autojump/autojump.sh' ]] && . '/usr/share/autojump/autojump.sh'
