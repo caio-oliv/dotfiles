@@ -117,13 +117,14 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: "Fira Code"
+    # family: "Iosevka"
+    family: "monospace"
 
     # The `style` can be specified to pick a specific face.
-    style: Light
+    # style: Light
 
   # Bold font face
-  bold:
+  # bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
@@ -131,7 +132,7 @@ font:
     #family: monospace
 
     # The `style` can be specified to pick a specific face.
-    style: Medium
+    # style: Medium
 
   # Italic font face
   #italic:
@@ -156,7 +157,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 10.0
+  size: 11.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -379,7 +380,7 @@ selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  save_to_clipboard: false
+  save_to_clipboard: true
 
 cursor:
   # Cursor style
