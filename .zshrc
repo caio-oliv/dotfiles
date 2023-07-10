@@ -11,7 +11,7 @@ zstyle ':completion:*' menu select
 autoload -U select-word-style
 select-word-style bash
 
-source ".config/zsh/env_var.zsh";
+source "$HOME/.config/zsh/env_var.zsh";
 source "$XDG_CONFIG_HOME/zsh/history_opt.zsh";
 source "$XDG_CONFIG_HOME/zsh/bindings.zsh";
 source "$XDG_CONFIG_HOME/zsh/alias.zsh";
