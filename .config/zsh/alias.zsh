@@ -14,5 +14,5 @@ alias podose='podman-compose'
 alias zll='zellij'
 alias hx='helix'
 
-alias todo-find='rg "NOTE|TODO|FIXME|PERF"'
+alias todo-find='rg "NOTE|TODO|FIXME|PERF|TEST"'
 
