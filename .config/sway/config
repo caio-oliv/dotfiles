@@ -32,7 +32,7 @@ tiling_drag enable
 output HDMI-A-1 mode 2560x1080@75Hz position 2560 0
 output * adaptive_sync on
 
-output "*" bg $HOME/images/wallpaper.jpg fill
+output "*" bg $HOME/images/foogy-forest.jpg fill
 
 # exec swayidle -w \
 #          timeout 300 'swaylock -f -c 000000' \
