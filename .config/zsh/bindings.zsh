@@ -33,7 +33,7 @@ zsh_key_ctrl_pageup='^[[5;5~';
 zsh_key_ctrl_pagedown='^[[6;5~';
 
 zsh_key_ctrl_backspace='^H';
-zsh_key_ctrl_space='^ ';
+zsh_key_ctrl_space='^@';
 
 zsh_key_shift_tab='^[[Z';
 

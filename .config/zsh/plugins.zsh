@@ -23,3 +23,18 @@ if [ -f $zsh_syntax_highlighting_path ]; then
   source $zsh_syntax_highlighting_path;
 fi
 
+
+#package:zsh-autosuggestions
+#repo:https://github.com/zsh-users/zsh-autosuggestions
+zsh_autosuggestions_path='/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh';
+if [ -f $zsh_autosuggestions_path ]; then
+  source $zsh_autosuggestions_path;
+
+  # specifies how suggestions should be generated.
+  ZSH_AUTOSUGGEST_STRATEGY=(history completion);
+
+  # disable autosuggestion for large buffers.
+  ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=32;
+
+  bindkey $zsh_key_ctrl_space autosuggest-accept;
+fi

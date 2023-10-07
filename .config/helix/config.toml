@@ -1,4 +1,4 @@
-theme = "monokai_pro"
+theme = "gruvbox"
 
 [editor]
 line-number = "absolute"
@@ -239,6 +239,7 @@ right = "move_char_right"
 pageup = "half_page_up"
 pagedown = "half_page_down"
 home = "goto_line_start"
+S-home = ["goto_line_start", "move_next_word_start", "move_char_right"]
 end = "goto_line_end_newline"
 
 S-up = "scroll_up"

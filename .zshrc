@@ -29,9 +29,6 @@ if [ -f "$HOME/.asdf/asdf.sh" ]; then
 	. "$ASDF_DIR/asdf.sh";
 fi
 
-# autojump
-[[ -f '/usr/share/autojump/autojump.sh' ]] && . '/usr/share/autojump/autojump.sh'
-
 # Google Cloud SDK.
 [[ -f '/usr/bin/gcloud/google-cloud-sdk/path.zsh.inc' ]] && . '/usr/bin/gcloud/google-cloud-sdk/path.zsh.inc'
 [[ -f '/usr/bin/gcloud/google-cloud-sdk/completion.zsh.inc' ]] && . '/usr/bin/gcloud/google-cloud-sdk/completion.zsh.inc'
@@ -42,5 +39,6 @@ complete -C aws_completer aws
 # starship setup
 eval "$(starship init zsh)"
 
+# setup zsh plugins
 source "$XDG_CONFIG_HOME/zsh/plugins.zsh";
 
