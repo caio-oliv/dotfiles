@@ -15,4 +15,5 @@ alias zll='zellij'
 alias hx='helix'
 
 alias todo-find='rg "NOTE|TODO|FIXME|PERF|TEST"'
+alias clippy-annoying='cargo clippy --all -- -W clippy::all -W clippy::pedantic -W clippy::restriction -W clippy::nursery -D warnings 2> annoying.clippy'
 
