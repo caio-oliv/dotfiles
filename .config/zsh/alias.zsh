@@ -7,9 +7,12 @@ alias ip='ip -c -h'
 alias ls='exa'
 alias lsa='exa --long --all --group-directories-first'
 alias exaa='exa --long --all'
-alias pmr='pnpm run'
-alias pmx='pnpm exec'
+
 alias podose='podman-compose'
+
+alias pnpm='corepack pnpm'
+alias pmr='corepack pnpm run'
+alias pmx='corepack pnpm exec'
 
 alias zll='zellij'
 alias hx='helix'

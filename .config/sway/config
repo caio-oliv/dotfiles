@@ -45,6 +45,16 @@ output "*" bg $HOME/images/foogy-forest.jpg fill
 
 
 ## Input `man 5 sway-input`
+# input "type:keyboard" {
+# xkb_layout us
+# xkb_variant intl
+# xkb_model pc105
+
+# repeat_delay 300
+# repeat_rate 30
+# }
+
+# BR - ABNT2
 input "type:keyboard" {
 	xkb_layout br
 	xkb_variant abnt2

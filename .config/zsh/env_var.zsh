@@ -37,5 +37,5 @@ export LESSHISTFILE=-
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PATH:$PNPM_HOME"
 
-# python? (not shure why python)
+# python? (not sure why python)
 export PATH="$PATH:$HOME/.local/bin"
