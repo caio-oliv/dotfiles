@@ -19,8 +19,7 @@ fpath+="$XDG_CONFIG_HOME/zsh/functions";
 
 # start sway after shell login
 if [ -z $WAYLAND_DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-	export XDG_CURRENT_DESKTOP=sway;
-  exec sway;
+  exec Hyprland;
 fi
 
 # asdf
@@ -41,4 +40,3 @@ eval "$(starship init zsh)"
 
 # setup zsh plugins
 source "$XDG_CONFIG_HOME/zsh/plugins.zsh";
-
