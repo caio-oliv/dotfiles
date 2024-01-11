@@ -3,11 +3,10 @@
 	"position": "top",
 	"height": 28,
 	"modules-left": [
-		"sway/workspaces",
-		"sway/mode"
+		"hyprland/workspaces"
 	],
 	"modules-center": [
-		"sway/window"
+		"hyprland/window"
 	],
 	"modules-right": [
 		"pulseaudio",
@@ -19,18 +18,19 @@
 		"tray",
 		"clock"
 	],
-	"sway/workspaces": {
-		"disable-scroll": true,
-		"all-outputs": false,
-		"format": "{name}"
+	"hyprland/workspaces": {
+		"format": "{name}",
+		"on-click": "activate",
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1"
 	},
-	"sway/mode": {
-		"format": "<span style=\"italic\">{}</span>"
+	"hyprland/window": {
+		"max-length": 200,
+		"separate-outputs": true
 	},
 	"temperature": {
-		"critical-threshold": 80,
-		"format-critical": "{temperatureC}°C ",
-		"format": "{temperatureC}°C "
+		"format": "{temperatureC}°C",
+		"critical-threshold": 80
 	},
 	"tray": {
 		"icon-size": 24,
@@ -52,7 +52,7 @@
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "{icon}{capacity}%"
+		"format": "Battery {capacity}%"
 	},
 	"network": {
 		"format-wifi": "{essid} ({signalStrength}%)",
@@ -60,21 +60,8 @@
 		"format-disconnected": "Disconnected"
 	},
 	"pulseaudio": {
-		"format": "{icon}{volume}%",
-		"format-bluetooth": "{icon}{volume}%",
-		"format-muted": "",
-		"format-icons": {
-			"headphones": "",
-			"handsfree": "",
-			"headset": "",
-			"phone": "",
-			"portable": "",
-			"car": "",
-			"default": [
-				"",
-				""
-			]
-		},
-		"on-click": "pavucontrol"
+		"format": "Volume {volume}%",
+		"format-bluetooth": "BT Volume {volume}%",
+		"format-muted": "Mute"
 	}
 }

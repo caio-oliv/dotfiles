@@ -4,6 +4,7 @@
   font-family: "monospace";
   font-size: 14px;
   min-height: 0;
+  box-shadow: none;
 }
 
 @keyframes blink-warning {
@@ -79,42 +80,49 @@ window#waybar {
   font-weight: bold;
 }
 
+#workspaces button:hover,
+#workspaces button {
+  box-shadow: none;
+  text-shadow: none;
+  transition: none;
+  background: none;
+}
+
 #workspaces button {
   border-top: 2px solid transparent;
-  /* To compensate for the top border and still have vertical centering */
   padding-bottom: 2px;
   padding-left: 10px;
   padding-right: 10px;
-  color: #888888;
+  color: white;
 }
 
 #workspaces button:hover {
-  border-color: #5a8eb6;
-  color: white;
-  background-color: #345c7b;
+  border-color: white;
+  background-color: #1a1a1a;
+}
+
+#workspaces button.active {
+  border-color: #fa913c;
 }
 
 #workspaces button.focused {
-  border-color: #4c7899;
-  color: white;
-  background-color: #285577;
+  border-color: #30838c;
 }
 
 #workspaces button.urgent {
-  border-color: #c9545d;
-  color: #c9545d;
+  border-color: #f73e19;
 }
 
 #pulseaudio {
-  color: #268bd2;
+  color: #40aaf5;
 }
 
 #memory {
-  color: #2aa198;
+  color: #62d9d0;
 }
 
 #cpu {
-  color: #6c71c4;
+  color: #c1abff;
 }
 
 #battery {
