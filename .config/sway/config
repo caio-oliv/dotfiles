@@ -10,11 +10,9 @@ set $up Up
 set $right Right
 
 set $term alacritty
-# FIXME: does no copy image to clipboard
-set $screenshot_window grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" - | wl-copy
-set $screenshot_region grim -g "$(slurp)" - | wl-copy
-# set $menu yofi apps
 set $menu tofi-run | xargs swaymsg exec --
+set $screenshot_window grim -t png -l 0 -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" - | wl-copy
+set $screenshot_region grim -t png -l 0 -g "$(slurp)" - | wl-copy
 
 
 ## Settings
@@ -34,6 +32,7 @@ output * adaptive_sync on
 
 output "*" bg $HOME/images/foogy-forest.jpg fill
 
+
 # exec swayidle -w \
 #          timeout 300 'swaylock -f -c 000000' \
 #          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
@@ -43,6 +42,8 @@ output "*" bg $HOME/images/foogy-forest.jpg fill
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
+# Start mako notification daemon
+exec mako
 
 ## Input `man 5 sway-input`
 # input "type:keyboard" {
