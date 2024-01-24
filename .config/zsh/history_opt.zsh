@@ -1,8 +1,8 @@
 # zsh history options
 
-export HISTFILE="$HOME/.zsh_history"; # history file
-export HISTSIZE=10000;                # number of commands that are stored in the zsh history file
-export SAVEHIST=1000;                 # number of commands that are loaded into memory from the history file
+export HISTFILE="$XDG_DATA_HOME/zsh_history";  # history file location
+export HISTSIZE=10000;                         # number of commands that are stored in the zsh history file
+export SAVEHIST=1000;                          # number of commands that are loaded into memory from the history file
 
 setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
