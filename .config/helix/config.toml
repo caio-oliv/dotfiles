@@ -133,7 +133,6 @@ p = "file_picker"
 "?" = "command_palette"
 b = "buffer_picker"
 j = "jumplist_picker"
-# FIXME: symbol picker does not work in typescript
 s = "symbol_picker"
 S-s = "workspace_symbol_picker"
 d = "diagnostics_picker"
