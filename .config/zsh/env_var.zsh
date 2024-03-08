@@ -14,6 +14,10 @@ export XDG_VIDEOS_DIR="$HOME/videos";
 export XDG_PICTURES_DIR="$HOME/images";
 export XDG_PUBLICSHARE_DIR="$HOME/public";
 
+# binary/application
+export BIN_HOME="$HOME/.local/bin"
+export PATH="$PATH:$BIN_HOME"
+
 # rust
 export RUST_BACKTRACE=1
 export PATH="$PATH:$HOME/.cargo/bin"
@@ -34,8 +38,14 @@ export EDITOR=helix
 export LESSHISTFILE=-
 
 # pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
+export PNPM_HOME="$XDG_DATA_HOME/pnpm"
 export PATH="$PATH:$PNPM_HOME"
 
-# python? (not sure why python)
-export PATH="$PATH:$HOME/.local/bin"
+# android
+export ANDROID_HOME="/opt/android-sdk"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+
+export ANDROID_USER_HOME="$XDG_DATA_HOME/android"
+export ANDROID_EMULATOR_HOME=$ANDROID_USER_HOME
+export ANDROID_AVD_HOME="$ANDROID_EMULATOR_HOME/avd"
