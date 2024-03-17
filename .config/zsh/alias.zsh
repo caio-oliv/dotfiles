@@ -8,6 +8,8 @@ alias ls='exa'
 alias lsa='exa --long --all --group-directories-first'
 alias exaa='exa --long --all'
 
+alias netctl='nmcli'
+
 alias podose='podman-compose'
 
 alias pnpm='corepack pnpm'
