@@ -16,41 +16,21 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 
 And after the checkout use the `conf` alias to manage the git home repository
 
-## Installation
+## Packages
 
-```sh
-sudo pacman -S \
-  efibootmgr \
-  man \
-  man-db \
-  zsh \
-  git \
-  nano \
-  openssh \
-  sway \
-  alacritty \
-  zellij \
-  tmux \
-  exa \
-  ripgrep \
-  neovim \
-  helix \
-  ttf-fira-code \
-  starship
-
-chsh -s $(which zsh)
-```
-
-### Other packages
-
-- [firefox](https://wiki.archlinux.org/title/firefox#Installing) ^1
-- [transmission-cli](https://archlinux.org/packages/extra/x86_64/transmission-cli/)
-
-> 1. add `MOZ_ENABLE_WAYLAND=1` enviroment variable to `/etc/environment` for wayland support
+- [x] Add script in `config/sys/packages/install-yay.sh` to install `yay`
+- [ ] Add script in `config/sys/setup-system.sh` to setup the system after a clear Arch linux installation
+  - [ ] setup kernel modules in `config/sys/kernel`
+  - [-] install yay
+  - [-] install **explicit** and **foreign** packages
+  - [ ] enable system services
+  - [ ] change the user default shell `chsh -s $(which zsh)`
+  - [ ] enable user services
+- [ ] Add script in `config/sys/sync-system.sh` to create the backup files for a full system setup
 
 ## Services
 
-### sway with seatd
+### seatd
 
 ```sh
 sudo usermod -aG seat caio
