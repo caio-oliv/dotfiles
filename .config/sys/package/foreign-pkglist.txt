@@ -3,4 +3,3 @@ asdf-vm
 google-chrome
 marksman-bin
 tofi
-tofi-debug
