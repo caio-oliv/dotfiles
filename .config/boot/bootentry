@@ -1,1 +1,0 @@
-efibootmgr --disk /dev/sdb --part 1 --create --label "Arch Linux (zen)" --loader /vmlinuz-linux --unicode 'initrd=\amd-ucode.img initrd=\initramfs-linux-zen.img root=PARTUUID=761526ce-da85-4bdd-be99-e9a22253ebc4 rw intel_pstate=no_hwp rootfstype=ext4'
