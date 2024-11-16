@@ -15,7 +15,7 @@ source "$HOME/.config/zsh/env_var.zsh";
 source "$XDG_CONFIG_HOME/zsh/history_opt.zsh";
 source "$XDG_CONFIG_HOME/zsh/bindings.zsh";
 source "$XDG_CONFIG_HOME/zsh/alias.zsh";
-fpath+="$XDG_CONFIG_HOME/zsh/functions";
+source "$XDG_CONFIG_HOME/zsh/functions.zsh";
 
 # start sway after shell login
 if [ -z $WAYLAND_DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then

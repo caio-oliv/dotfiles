@@ -23,6 +23,9 @@ export RUST_BACKTRACE=1
 export PATH="$PATH:$HOME/.cargo/bin"
 export CROSS_CONTAINER_ENGINE=podman
 
+# dotnet
+export DOTNET_CLI_USE_MSBUILD_SERVER=0
+
 # helix
 export HELIX_PATH="$XDG_CONFIG_HOME/helix"
 
