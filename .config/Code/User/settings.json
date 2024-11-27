@@ -1,0 +1,76 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.startupEditor": "none",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.compactFolders": false,
+    "explorer.confirmPasteNative": false,
+    "editor.fontFamily": "Iosevka, 'monospace', monospace",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.indentSize": 2,
+    "editor.insertSpaces": false,
+    "editor.tabSize": 2,
+    "editor.minimap.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.openRepositoryInParentFolders": "always",
+    "extensions.ignoreRecommendations": true,
+    "update.mode": "none",
+    "update.showReleaseNotes": false,
+    "html.format.indentInnerHtml": false,
+    "html.format.wrapLineLength": 100,
+    "[markdown]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.wordWrap": "on"
+    },
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.suggest.insertMode": "replace"
+    },
+    "[csharp]": {
+        "editor.tabSize": 4,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.maxTokenizationLineLength": 2500
+    },
+    "[rust]": {
+        "editor.tabSize": 4,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "eslint.enable": true,
+    "eslint.format.enable": true,
+    "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "gitlens.views.stashes.files.layout": "list",
+    "gitlens.views.commits.files.layout": "list"
+}
