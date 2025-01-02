@@ -4,3 +4,9 @@ function todofind() {
 
   rg $regex $@;
 }
+
+function git-conflict-accept-both() {
+  local regex="^(=======)|(<<<<<<<*)|(>>>>>>>*)";
+
+  rg --invert-match $regex $@;
+}
