@@ -1,3 +1,5 @@
+# Source: https://wiki.archlinux.org/title/MPRIS#Playerctl
+
 [Unit]
 Description=Keep track of media player activity
 
