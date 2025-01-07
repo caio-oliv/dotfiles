@@ -10,3 +10,8 @@ function git-conflict-accept-both() {
 
   rg --invert-match $regex $@;
 }
+
+function reload-bluetooth() {
+  sudo modprobe --remove btusb;
+  sudo modprobe btusb;
+}
