@@ -2,9 +2,6 @@
 
 set -e;
 
-# TODO: [sshd] backup config files;
-# TODO: [kmod] sync only kernel modules with the `sync.conf` extension;
-
 PACKAGE_SCRIPT_PATH="$XDG_CONFIG_HOME/sys/package";
 KENREL_SCRIPT_PATH="$XDG_CONFIG_HOME/sys/kernel";
 USER_SCRIPT_PATH="$XDG_CONFIG_HOME/sys/user";
