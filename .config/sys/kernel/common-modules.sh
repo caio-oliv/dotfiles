@@ -2,7 +2,7 @@
 
 set -e;
 
-export MODULE_EXT='.conf';
+export MODULE_EXT='.sync.conf';
 export MODULES_PATH='/etc/modules-load.d';
 
 export BACKUP_PATH="$XDG_CONFIG_HOME/sys/kernel/modules-load";
