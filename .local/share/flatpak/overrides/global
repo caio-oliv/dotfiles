@@ -1,6 +1,6 @@
 [Context]
 sockets=!gpg-agent;!pcsc;!ssh-auth;!system-bus;!session-bus
-filesystems=xdg-config/fontconfig:ro;!~/.gnupg;!~/.ssh;!xdg-documents;!home;!host
+filesystems=!~/.ssh;!~/.gnupg;xdg-config/fontconfig:ro;!home;!host
 
 [Session Bus Policy]
 org.freedesktop.Flatpak=none

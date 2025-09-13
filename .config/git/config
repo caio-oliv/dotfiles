@@ -15,6 +15,7 @@
 	rollback = reset --soft HEAD~1
 	c = commit
 	ck = checkout
+	sw = switch
 	st = status
 	lg = log --oneline --graph
 	lsf-untracked = ls-files --others --exclude-standard
