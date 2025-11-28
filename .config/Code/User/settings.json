@@ -71,6 +71,10 @@
     "eslint.format.enable": true,
     "rust-analyzer.check.command": "clippy",
     "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "todohighlight.keywords": [
+        "TODO:",
+    ],
     "gitlens.views.stashes.files.layout": "list",
-    "gitlens.views.commits.files.layout": "list"
+    "gitlens.views.commits.files.layout": "list",
+    "workbench.secondarySideBar.defaultVisibility": "hidden"
 }

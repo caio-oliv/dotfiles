@@ -12,11 +12,10 @@ alias exaa='exa --long --all'
 alias sysctl='systemctl'
 alias netctl='nmcli'
 
-alias podose='podman-compose'
+alias podose='podman compose'
 
-alias pnpm='corepack pnpm'
-alias pmr='corepack pnpm run'
-alias pmx='corepack pnpm exec'
+alias pmr='pnpm run'
+alias pmx='pnpm exec'
 
 alias npr='npm run'
 

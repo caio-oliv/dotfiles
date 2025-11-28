@@ -23,10 +23,7 @@ if [ -z $WAYLAND_DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
 fi
 
 # asdf
-if [ -f "$HOME/.asdf/asdf.sh" ]; then
-	ASDF_DIR="$HOME/.asdf";
-	. "$ASDF_DIR/asdf.sh";
-fi
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH";
 
 # Google Cloud SDK.
 [[ -f '/usr/bin/gcloud/google-cloud-sdk/path.zsh.inc' ]] && . '/usr/bin/gcloud/google-cloud-sdk/path.zsh.inc'
