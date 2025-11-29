@@ -16,31 +16,22 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 
 And after the checkout use the `conf` alias to manage the git home repository
 
+## Setup system
+
+Just the `setup-system.sh` script.
+
+```sh
+.config/sys/setup-system.sh --no-install-package
+```
+
 ## Packages
 
-- [x] Add script in `config/sys/packages/install-yay.sh` to install `yay`
-- [ ] Add script in `config/sys/setup-system.sh` to setup the system after a clear Arch linux installation
-  - [ ] setup kernel modules in `config/sys/kernel`
-  - [-] install yay
-  - [-] install **explicit** and **foreign** packages
-  - [ ] enable system services
-  - [ ] change the user default shell `chsh -s $(which zsh)`
-  - [ ] enable user services
-- [ ] Add script in `config/sys/sync-system.sh` to create the backup files for a full system setup
+- install yay: `.config/sys/package/install-yay.sh`
+- install package list: `.config/sys/package/install-pkglist.sh`
 
 ## Services
 
-### seatd
+Start systemd services with the provided scripts.
 
-```sh
-sudo usermod -aG seat caio
-# logout and login
-sudo systemctl enable --now seatd.service
-```
-
-### ssh and ssh-agent
-
-```sh
-sudo systemctl enable --now sshd
-systemctl --user enable --now ssh-agent
-```
+- system services: `.config/sys/service/start-system-service.sh`
+- user services: `.config/sys/service/start-user-service.sh`
