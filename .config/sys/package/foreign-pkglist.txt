@@ -1,5 +1,9 @@
 android-sdk-cmdline-tools-latest
 asdf-vm
-google-chrome
-marksman-bin
+asdf-vm-debug
+brave-bin
+hyprland-qtutils-debug
 tofi
+uefitool
+visual-studio-code-bin
+vlc-plugin-pipewire
