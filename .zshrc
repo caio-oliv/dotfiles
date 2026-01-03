@@ -19,7 +19,7 @@ source "$XDG_CONFIG_HOME/zsh/functions.zsh";
 
 # start sway after shell login
 if [ -z $WAYLAND_DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-  exec Hyprland 1> /dev/null;
+  exec start-hyprland;
 fi
 
 # asdf
