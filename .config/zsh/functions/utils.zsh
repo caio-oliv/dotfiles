@@ -10,6 +10,14 @@ function random-string() {
   echo "$str";
 }
 
+function python-init-venv() {
+  python -m venv .venv;
+}
+
+function python-enter-venv() {
+  source .venv/bin/activate;
+}
+
 function git-conflict-accept-both() {
   local regex="^(=======)|(<<<<<<<*)|(>>>>>>>*)";
 

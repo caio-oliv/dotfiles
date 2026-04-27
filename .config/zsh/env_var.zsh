@@ -52,3 +52,6 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export ANDROID_USER_HOME="$XDG_DATA_HOME/android"
 export ANDROID_EMULATOR_HOME=$ANDROID_USER_HOME
 export ANDROID_AVD_HOME="$ANDROID_EMULATOR_HOME/avd"
+
+# hyprland
+export HYPRLAND_START_LOG="$XDG_CACHE_HOME/hyprland/start.log"

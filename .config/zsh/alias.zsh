@@ -9,7 +9,6 @@ alias ls='exa'
 alias lsa='exa --long --all --group-directories-first'
 alias exaa='exa --long --all'
 
-alias sysctl='systemctl'
 alias netctl='nmcli'
 
 alias podose='podman compose'
