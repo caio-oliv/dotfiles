@@ -55,3 +55,7 @@ export ANDROID_AVD_HOME="$ANDROID_EMULATOR_HOME/avd"
 
 # hyprland
 export HYPRLAND_START_LOG="$XDG_CACHE_HOME/hyprland/start.log"
+
+# docker
+export DOCKER_HOST="unix://$XDG_RUNTIME_DIR/docker.sock"
+

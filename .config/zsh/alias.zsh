@@ -12,6 +12,7 @@ alias exaa='exa --long --all'
 alias netctl='nmcli'
 
 alias podose='podman compose'
+alias docose='docker compose'
 
 alias pmr='pnpm run'
 alias pmx='pnpm exec'
@@ -20,5 +21,6 @@ alias npr='npm run'
 
 alias zll='zellij'
 alias hx='helix'
+alias zed='zeditor'
 
 alias clippy-annoying='cargo clippy --all -- -W clippy::all -W clippy::pedantic -W clippy::restriction -W clippy::nursery -D warnings 2> annoying.clippy'
