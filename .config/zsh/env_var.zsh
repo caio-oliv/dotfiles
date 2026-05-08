@@ -9,6 +9,7 @@ export XDG_CACHE_HOME="$HOME/.cache";
 export XDG_DESKTOP_DIR="$HOME/desktop";
 export XDG_DOWNLOAD_DIR="$HOME/downloads";
 export XDG_DOCUMENTS_DIR="$HOME/documents";
+export XDG_PROJECTS_DIR="$HOME/projects";
 export XDG_MUSIC_DIR="$HOME/music";
 export XDG_VIDEOS_DIR="$HOME/videos";
 export XDG_PICTURES_DIR="$HOME/images";
@@ -39,6 +40,10 @@ export GPG_TTY=$(tty)
 export PS_FORMAT=pid,uname,pcpu,pmem,command,start,tty
 export EDITOR=helix
 export LESSHISTFILE=-
+
+# asdf
+export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf";
+export PATH="$ASDF_DATA_DIR/shims:$PATH";
 
 # pnpm
 export PNPM_HOME="$XDG_DATA_HOME/pnpm"

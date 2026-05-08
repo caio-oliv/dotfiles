@@ -7,14 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+	"diff_view_style": "unified",
 	"server_url": "https://zed.dev",
- "git": {
-  "inline_blame": {
-   "show_commit_summary": true,
-   "delay_ms": 300
-  }
- },
- "use_on_type_format": false,
+	"git": {
+		"inline_blame": {
+			"show_commit_summary": true,
+			"delay_ms": 300,
+		},
+	},
+	"use_on_type_format": false,
 	"toolbar": {
 		"agent_review": false,
 		"breadcrumbs": true,
@@ -48,7 +49,8 @@
 		"model_parameters": [],
 	},
 	"git_panel": {
-		"dock": "left",
+		"tree_view": false,
+  "dock": "left",
 	},
 	"icon_theme": "Material Icon Theme",
 	"disable_ai": true,
@@ -68,7 +70,7 @@
 		"indent_size": 16.0,
 		"entry_spacing": "standard",
 		"dock": "left",
-		"auto_fold_dirs": false,
+		"auto_fold_dirs": true,
 	},
 	"base_keymap": "VSCode",
 	"minimap": {

@@ -3,6 +3,7 @@
     "workbench.colorTheme": "One Dark Pro Darker",
     "workbench.editor.empty.hint": "hidden",
     "workbench.startupEditor": "none",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.compactFolders": false,
@@ -69,12 +70,22 @@
     "javascript.updateImportsOnFileMove.enabled": "always",
     "eslint.enable": true,
     "eslint.format.enable": true,
+    "rust-analyzer.files.watcher": "server",
+    "rust-analyzer.files.exclude": [
+        "**/.git/**",
+        "**/target/**",
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/out/**"
+    ],
+    "rust-analyzer.cargo.targetDir": "target/lsp",
+    "rust-analyzer.cargo.allTargets": true,
+    "rust-analyzer.check.allTargets": true,
     "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.cargo.features": "all",
     "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "python.analysis.typeCheckingMode": "strict",
     "todohighlight.keywords": [
         "TODO:",
-    ],
-    "gitlens.views.stashes.files.layout": "list",
-    "gitlens.views.commits.files.layout": "list",
-    "workbench.secondarySideBar.defaultVisibility": "hidden"
+    ]
 }
