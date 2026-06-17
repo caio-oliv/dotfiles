@@ -64,3 +64,6 @@ export HYPRLAND_START_LOG="$XDG_CACHE_HOME/hyprland/start.log"
 # docker
 export DOCKER_HOST="unix://$XDG_RUNTIME_DIR/docker.sock"
 
+# podman
+export PODMAN_COMPOSE_PROVIDER=podman-compose;
+export PODMAN_COMPOSE_WARNING_LOGS=false;
