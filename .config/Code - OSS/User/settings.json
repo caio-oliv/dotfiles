@@ -8,6 +8,7 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.compactFolders": false,
     "explorer.confirmPasteNative": false,
+    "chat.agent.enabled": false,
     "editor.fontFamily": "Iosevka, 'monospace', monospace",
     "editor.fontLigatures": true,
     "editor.formatOnSave": true,
@@ -66,8 +67,7 @@
         "editor.indentSize": "tabSize",
         "editor.insertSpaces": true
     },
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "javascript.updateImportsOnFileMove.enabled": "always",
+    "js/ts.updateImportsOnFileMove.enabled": "always",
     "eslint.enable": true,
     "eslint.format.enable": true,
     "rust-analyzer.files.watcher": "server",
