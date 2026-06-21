@@ -2,8 +2,6 @@ android-sdk-cmdline-tools-latest
 asdf-vm
 asdf-vm-debug
 brave-bin
-hyprland-qtutils-debug
+docker-rootless-extras
 tofi
-uefitool
-visual-studio-code-bin
-vlc-plugin-pipewire
+tofi-debug
