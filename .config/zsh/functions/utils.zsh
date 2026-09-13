@@ -42,3 +42,11 @@ function reload-bluetooth() {
   sudo modprobe --remove btusb;
   sudo modprobe btusb;
 }
+
+function start-transmission() {
+  transmission-daemon --logfile $TRANSMISSION_DAEMON_LOG;
+}
+
+function stop-transmission() {
+  transmission-remote --exit;
+}

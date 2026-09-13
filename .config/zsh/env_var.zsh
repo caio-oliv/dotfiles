@@ -67,3 +67,6 @@ export DOCKER_HOST="unix://$XDG_RUNTIME_DIR/docker.sock"
 # podman
 export PODMAN_COMPOSE_PROVIDER=podman-compose;
 export PODMAN_COMPOSE_WARNING_LOGS=false;
+
+# transmission (torrent)
+export TRANSMISSION_DAEMON_LOG="$XDG_CACHE_HOME/transmission/daemon.log";

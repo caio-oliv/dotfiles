@@ -67,9 +67,12 @@ hl.config({
   },
 
   input = {
-    kb_layout = "br",
-    kb_variant = "abnt2",
-    kb_model = "abnt2",
+    -- 1. BR ABNT2
+    -- 2. US International
+    kb_layout = "br,us",
+    kb_model = "abnt2,",
+    kb_variant = ",intl",
+    kb_options = "grp:alt_space_toggle", -- Alt + Space
 
     touchpad = {
       disable_while_typing = true,
