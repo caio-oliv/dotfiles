@@ -16,8 +16,10 @@ export XDG_PICTURES_DIR="$HOME/images";
 export XDG_PUBLICSHARE_DIR="$HOME/public";
 
 # binary/application
-export BIN_HOME="$HOME/.local/bin"
-export PATH="$PATH:$BIN_HOME"
+export BIN_HOME="$HOME/.local/bin";
+export LIB_HOME="$HOME/.local/lib";
+export PATH="$PATH:$BIN_HOME";
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$LIB_HOME";
 
 # rust
 export RUST_BACKTRACE=1

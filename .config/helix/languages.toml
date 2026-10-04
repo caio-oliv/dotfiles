@@ -1,2 +1,10 @@
+use-grammars = { only = [
+    "rust", "rust-format-args", "c", "cpp", "typescript", "javascript", "svelte",
+    "vue", "java", "sql", "css", "scss", "html", "yaml", "toml", "bash",
+    "dockerfile", "git-commit", "git-config", "git-rebase", "jsdoc", "json",
+    "json5", "just", "lua", "markdown", "markdown_inline", "nginx", "python",
+    "wat", "wit", "xml"
+] }
+
 [language-server.rust-analyzer]
 config.check.command = "clippy"

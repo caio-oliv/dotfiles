@@ -1,0 +1,78 @@
+{
+  "model": "haiku",
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "medium"
+    },
+    "claude-haiku-4-5": {
+      "effortLevel": "high"
+    }
+  },
+  "timeFormat": "24-hour",
+  "theme": "dark",
+  "alwaysThinkingEnabled": false,
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true
+  },
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(ls *)",
+      "Bash(mkdir *)",
+      "Bash(find *)",
+      "Bash(tail *)",
+      "Bash(head *)",
+      "Bash(file *)",
+      "Bash(stat *)",
+      "Bash(grep *)",
+      "Bash(rg *)",
+      "Bash(sort *)",
+      "Bash(jq *)",
+      "Bash(which *)",
+      "Bash(man *)",
+      "Bash(sha256sum *)",
+      "Bash(base64 *)",
+      "Bash(podman *)",
+      "Bash(cargo *)",
+      "Bash(rustc *)",
+      "Bash(gcc *)",
+      "Bash(clang *)",
+      "Bash(just *)",
+      "Bash(pnpm run *)",
+      "Bash(playwright-cli *)",
+      "Bash(git status *)",
+      "Bash(git log *)",
+      "Bash(git diff *)",
+      "Bash(git show *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:*.github.com)",
+      "WebFetch(domain:*.docker.com)",
+      "WebFetch(domain:rust-lang.org)",
+      "WebFetch(domain:*.rust-lang.org)",
+      "WebFetch(domain:docs.rs)",
+      "WebFetch(domain:crates.io)",
+      "WebFetch(domain:npmjs.com)",
+      "WebFetch(domain:developer.mozilla.org)",
+      "WebFetch(domain:docs.aws.amazon.com)"
+    ],
+    "ask": [
+      "Bash(rm *)",
+      "Bash(git *)",
+      "Bash(curl *)",
+      "Bash(node *)"
+    ],
+    "deny": [
+      "Read(~/.ssh/**)",
+      "Read(~/.config/**)",
+      "Read(~/.local/**)",
+      "Read(~/documents/**)",
+      "Read(~/downloads/**)",
+      "Read(~/images/**)",
+      "Read(~/videos/**)",
+      "Read(~/.zshrc)",
+      "Bash(sudo *)",
+      "Bash(git push *)"
+    ]
+  }
+}

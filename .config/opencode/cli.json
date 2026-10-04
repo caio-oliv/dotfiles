@@ -1,0 +1,28 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "theme": {
+    "name": "monokai",
+    "mode": "system"
+  },
+  "animations": true,
+  "cursor": {
+    "style": "line",
+    "blinking": true
+  },
+  "mouse": true,
+  "prompt": {
+    "editor": true,
+    "paste": "full",
+    "image_preview": false
+  },
+  "diffs": {
+    "wrap": "word"
+  },
+  "session": {
+    "markdown": "rendered",
+    "sidebar": "hide",
+    "scrollbar": false,
+    "thinking": "hide",
+    "tps": true
+  }
+}

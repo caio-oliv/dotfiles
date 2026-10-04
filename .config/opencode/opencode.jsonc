@@ -1,0 +1,313 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "local/qwen3-6",
+  "formatter": true,
+  "snapshots": false,
+  "compaction": {
+    "auto": true
+  },
+  "providers": {
+    "local": {
+      "name": "Local server",
+      "package": "@opencode/ai/providers/openai-compatible",
+      "models": {
+        "qwen3-6": {
+          "modelID": "qwen3.6",
+          "name": "Qwen3.6 35B MoE",
+          "family": "qwen",
+          "settings": {
+            "reasoningEffort": "medium",
+          },
+          "capabilities": {
+            "tools": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ],
+          },
+          "limit": {
+            "context": 98304,
+          },
+        }
+      },
+      "settings": {
+        "baseURL": "http://localhost:4141",
+        "apiKey": "{env:LLAMA_SERVER_API_KEY}"
+      },
+      "env": [
+        "LLAMA_SERVER_API_KEY"
+      ]
+    }
+  },
+  "permissions": [
+    // allow rules:
+    {
+      "action": "shell",
+      "resource": "ls *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "mkdir *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "find *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "tail *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "head *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "file *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "stat *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "grep *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "rg *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "sort *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "jq *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "which *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "man *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "sha256sum *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "base64 *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "podman *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "cargo *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "rustc *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "gcc *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "clang *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "just *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm run *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "playwright-cli *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git status *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git log *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git diff *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git show *",
+      "effect": "allow"
+    },
+    {
+      "action": "webfetch",
+      "resource": "https://github.com/*",
+      "effect": "allow"
+    },
+    {
+      "action": "webfetch",
+      "resource": "https://gist.github.com/*",
+      "effect": "allow"
+    },
+    {
+      "action": "webfetch",
+      "resource": "https://hub.docker.com/*",
+      "effect": "allow"
+    },
+    {
+      "action": "webfetch",
+      "resource": "https://docs.docker.com/*",
+      "effect": "allow"
+    },
+    {
+      "action": "webfetch",
+      "resource": "https://docs.rs/*",
+      "effect": "allow"
+    },
+    {
+      "action": "webfetch",
+      "resource": "https://crates.io/*",
+      "effect": "allow"
+    },
+    {
+      "action": "webfetch",
+      "resource": "https://npmjs.com/*",
+      "effect": "allow"
+    },
+    {
+      "action": "webfetch",
+      "resource": "https://developer.mozilla.org/*",
+      "effect": "allow"
+    },
+    {
+      "action": "webfetch",
+      "resource": "https://docs.aws.amazon.com/*",
+      "effect": "allow"
+    },
+    // deny rules:
+    {
+      "action": "external_directory",
+      "resource": "*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "~/.ssh/*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "~/.config/*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "~/.local/*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "~/documents/*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "~/downloads/*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "~/images/*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "~/videos/*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "~/.zshrc",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "sudo *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "git push *",
+      "effect": "deny"
+    }
+  ],
+  "mcp": {
+    "servers": {
+      "playwright": {
+        "type": "local",
+        "command": [
+          "playwright-mcp"
+        ]
+      }
+    }
+  },
+  "experimental": {
+    "policies": [
+      {
+        "action": "permission",
+        "resource": "shell:sudo *",
+        "effect": "deny"
+      },
+      {
+        "action": "permission",
+        "resource": "external_directory:*",
+        "effect": "deny"
+      },
+      {
+        "action": "permission",
+        "resource": "shell:git push *",
+        "effect": "deny"
+      }
+    ],
+  },
+}
